@@ -44,7 +44,7 @@ function Poop(fisk){
     console.log('Poop!');
 
     var position = $(fisk).offset();
-    for (var poops = 0; poops < Math.floor(Math.random() * 6) ; poops++){
+    for (var poops = 0; poops < Math.floor(Math.random() * 6) + 4 ; poops++){
         var poop = $('<div>');
         $('body').append(poop);
         $(poop).css('border-radius', '50%');
@@ -55,8 +55,8 @@ function Poop(fisk){
         $(poop).css('position', 'absolute');
         $(poop).css(position);
 
-        var poopVertical = position.top + Math.floor(Math.random() * 30) - 15;
-        var poopHorizontal = position.left + Math.floor(Math.random() * 30) - 15;
+        var poopVertical = position.top + Math.floor(Math.random() * 40) - 20;
+        var poopHorizontal = position.left + Math.floor(Math.random() * 40) - 20;
 
         $(poop).animate({
             top: poopVertical+'px',

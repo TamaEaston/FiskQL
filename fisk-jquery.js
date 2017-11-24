@@ -111,7 +111,7 @@ function Widdle(fisk){
     $(widdle).css('width', '1px');
     $(widdle).css('height', '1px');
     $(widdle).css('background-color', '#ff0');
-    $(widdle).css('opacity', 0.5);
+    $(widdle).css('opacity', 0.2);
     $(widdle).css('z-index', '9995');
     $(widdle).css('position', 'absolute');
     $(widdle).css(position);
@@ -139,7 +139,7 @@ function WakeUp(word){
     var position = $(word).offset();
     $(word).removeClass('sleeping-fisk');
     var fisk = $(word).clone();
-    $('body').append(fisk);
+    $(word).after(fisk);
     $(fisk).css('border', '#D93E14 1px solid');
     $(fisk).css('border-radius', '10px');
     $(fisk).css('background-color', '#D93E14');
